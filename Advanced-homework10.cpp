@@ -1,0 +1,27 @@
+/* 計算機概論實務-進階練習作業-作業10 */
+/* 製作人：郭柏鋒 */
+/* 完成時間：2019/04/11 16:31 */
+#include<iostream>//函示庫 
+int main()
+{
+	int number; //定義輸入值 
+    int i; 
+    printf("計算機概論實務-進階練習作業-作業10\n");
+	printf("製作人：郭柏鋒\n");
+	printf("完成時間：2019/04/11 16:31\n");
+	printf("-----------------------------------\n");
+	printf("質因數分解-請輸入一個正整數：");
+    scanf("%d",& number); //輸入值  
+    printf ("質因數%d分解的質因數為：",number); //顯示 
+      for ( i = 2 ; i <= number ; i ++) { //做輸入值的次數 
+        while ( number != i ) {    //階層 
+            if ( number % i == 0 ) { //能被整除 
+                printf ( "%d*" , i ); //顯示 
+                number = number / i ; //數字在除被整除的數 
+            } else
+                break ;//結束 
+        }
+    }
+    printf ( "%d \n " , number );
+    return 0;
+}
